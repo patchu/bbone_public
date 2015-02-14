@@ -45,7 +45,6 @@ cleanup = ->
 
 knight = ->
 	delayTime = 100
-	maxLedNum = 4
 	maxInterations = 300
 	count = 0
 	hiLed = 3

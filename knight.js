@@ -67,9 +67,8 @@ cleanup = function() {
 };
 
 knight = function() {
-  var count, currDirection, currLed, delayTime, hiLed, lowLed, maxInterations, maxLedNum, worker;
+  var count, currDirection, currLed, delayTime, hiLed, lowLed, maxInterations, worker;
   delayTime = 100;
-  maxLedNum = 4;
   maxInterations = 300;
   count = 0;
   hiLed = 3;
