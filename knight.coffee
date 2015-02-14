@@ -1,4 +1,3 @@
-# this is the first test of the bbone
 
 b = require 'bonescript'
 usbbase = '/sys/class/leds/beaglebone:green:usr'
