@@ -30,10 +30,13 @@ uArray.push(u2);
 uArray.push(u3);
 
 initMode = function() {
-  b.pinMode(u0, out);
-  b.pinMode(u1, out);
-  b.pinMode(u2, out);
-  return b.pinMode(u3, out);
+  var led, _i, _len, _results;
+  _results = [];
+  for (_i = 0, _len = uArray.length; _i < _len; _i++) {
+    led = uArray[_i];
+    _results.push(b.pinMode(led, out));
+  }
+  return _results;
 };
 
 setLED = function(pinnum, onMode, cb, delay) {
@@ -55,10 +58,12 @@ setLED = function(pinnum, onMode, cb, delay) {
 };
 
 cleanup = function() {
-  setLED(0, false);
-  setLED(1, false);
-  setLED(2, false);
-  setLED(3, false);
+  var i, _i, _len, _ref;
+  _ref = uArray.length;
+  for (_i = 0, _len = _ref.length; _i < _len; _i += 1) {
+    i = _ref[_i];
+    setLED(1, false);
+  }
 };
 
 knight = function() {

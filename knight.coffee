@@ -19,10 +19,8 @@ uArray.push u2
 uArray.push u3
 
 initMode = ->
-	b.pinMode u0, out
-	b.pinMode u1, out
-	b.pinMode u2, out
-	b.pinMode u3, out
+	for led in uArray
+		b.pinMode led, out
 
 
 setLED = (pinnum, onMode, cb, delay) ->
@@ -41,10 +39,8 @@ setLED = (pinnum, onMode, cb, delay) ->
 	return
 
 cleanup = ->
-	setLED 0, false
-	setLED 1, false
-	setLED 2, false
-	setLED 3, false
+	for i in uArray.length by 1
+		setLED 1, false
 	return
 
 
