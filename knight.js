@@ -62,7 +62,7 @@ cleanup = function() {
   _ref = uArray.length;
   for (_i = 0, _len = _ref.length; _i < _len; _i += 1) {
     i = _ref[_i];
-    setLED(1, false);
+    setLED(i, false);
   }
 };
 

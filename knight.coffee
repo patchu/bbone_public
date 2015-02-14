@@ -1,4 +1,3 @@
-
 b = require 'bonescript'
 usbbase = '/sys/class/leds/beaglebone:green:usr'
 
@@ -39,7 +38,7 @@ setLED = (pinnum, onMode, cb, delay) ->
 
 cleanup = ->
 	for i in uArray.length by 1
-		setLED 1, false
+		setLED i, false
 	return
 
 
